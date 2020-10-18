@@ -33,8 +33,10 @@ public class PokemonController {
         return pokemonDetailsService.getPokemonDetails(name);
     }
 
+
     @GetMapping("/list")
     public PokemonList getPokemonsList(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
         return pokemonListService.getPokemonListItem(page, size);
     }
+
 }
